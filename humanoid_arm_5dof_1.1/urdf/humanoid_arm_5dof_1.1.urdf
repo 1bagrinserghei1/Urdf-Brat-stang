@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="humanoid_arm_5dof_1.1">
+  <link
+    name="base_fixture_link">
+    <inertial>
+      <origin
+        xyz="0.020038 0.011873 0.36664"
+        rpy="0 0 0" />
+      <mass
+        value="400" />
+      <inertia
+        ixx="2.851"
+        ixy="-0.025185"
+        ixz="-0.21797"
+        iyy="2.8785"
+        iyz="-0.12915"
+        izz="0.18525" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/base_fixture_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/base_fixture_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_shoulder_pitch_rs04_actuator">
+    <inertial>
+      <origin
+        xyz="-0.024532 1.1724E-12 -9.6279E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.51742" />
+      <inertia
+        ixx="0.00087641"
+        ixy="-1.1557E-17"
+        ixz="-1.4766E-16"
+        iyy="0.0005424"
+        iyz="-3.5471E-06"
+        izz="0.00054116" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_pitch_rs04_actuator.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_pitch_rs04_actuator.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_pitch_rs04_actuator_fixture_link"
+    type="fixed">
+    <origin
+      xyz="0.32924 0.19509 1.45"
+      rpy="-0.6108 0 0.53491" />
+    <parent
+      link="base_fixture_link" />
+    <child
+      link="left_shoulder_pitch_rs04_actuator" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_pitch_rs04_flange">
+    <inertial>
+      <origin
+        xyz="-0.00188936806429085 -9.55715032979754E-05 2.58079796440214E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00758352122244523" />
+      <inertia
+        ixx="2.36230802703344E-06"
+        ixy="5.7637945082695E-21"
+        ixz="-6.12775397779283E-21"
+        iyy="1.19406420659587E-06"
+        iyz="2.43521972335611E-21"
+        izz="1.19406420659588E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_pitch_rs04_flange.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_pitch_rs04_flange.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_pitch_rs04_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_pitch_rs04_actuator" />
+    <child
+      link="left_shoulder_pitch_rs04_flange" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="120"
+      velocity="3" />
+    <safety_controller
+      soft_upper_limit="3.14"
+      soft_lower_limit="-3.14"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="m5x22_screws_left_shoulder_pitch">
+    <inertial>
+      <origin
+        xyz="0.0063935043367972 -0.00479834508206478 0.00128572351764866"
+        rpy="0 0 0" />
+      <mass
+        value="0.00474644340626601" />
+      <inertia
+        ixx="2.66191925293528E-08"
+        ixy="-1.25098390817692E-13"
+        ixz="-1.97477629424858E-13"
+        iyy="3.310539167949E-07"
+        iyz="8.62570751952679E-14"
+        izz="3.31054672965684E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m5x22_screws_left_shoulder_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m5x22_screws_left_shoulder_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m5x22_screws_left_shoulder_pitch_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_pitch_rs04_flange" />
+    <child
+      link="m5x22_screws_left_shoulder_pitch" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_pitch">
+    <inertial>
+      <origin
+        xyz="0.0682474669282063 0.0395514519562079 -5.23403518437604E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.19772099934384" />
+      <inertia
+        ixx="0.00347656174420471"
+        ixy="-0.00164350112456368"
+        ixz="-3.10207740074819E-07"
+        iyy="0.00604621894196034"
+        iyz="-1.29484314098345E-07"
+        izz="0.00615255051550607" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_pitch_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m5x22_screws_left_shoulder_pitch" />
+    <child
+      link="left_shoulder_pitch" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="m5x22_screws_left_shoulder_roll">
+    <inertial>
+      <origin
+        xyz="0.11672415599943 0.0615935045052258 2.41514705503487E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00610257053905786" />
+      <inertia
+        ixx="4.25641380807024E-07"
+        ixy="1.38655677483118E-13"
+        ixz="4.65295401766927E-13"
+        iyy="3.42246799589702E-08"
+        iyz="2.62800032759062E-13"
+        izz="4.25641102603541E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m5x22_screws_left_shoulder_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m5x22_screws_left_shoulder_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m5x22_screws_left_shoulder_roll_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_pitch" />
+    <child
+      link="m5x22_screws_left_shoulder_roll" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_roll_rs04_flange">
+    <inertial>
+      <origin
+        xyz="-3.94129173741931E-14 -0.00211063193644101 9.66495772303233E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00758352122244502" />
+      <inertia
+        ixx="1.19406420659583E-06"
+        ixy="9.52912065661088E-22"
+        ixz="-5.42630481834786E-22"
+        iyy="2.36230802703336E-06"
+        iyz="-2.23655047491822E-15"
+        izz="1.19406420659583E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_roll_rs04_flange.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_roll_rs04_flange.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_roll_rs04_flange_joint"
+    type="fixed">
+    <origin
+      xyz="0.11678 0.0487 -2.7056E-05"
+      rpy="0 0 3.1416" />
+    <parent
+      link="m5x22_screws_left_shoulder_roll" />
+    <child
+      link="left_shoulder_roll_rs04_flange" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_roll_rs04_actuator">
+    <inertial>
+      <origin
+        xyz="7.54312757605957E-05 0.0205322216645345 2.70558601349613E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.517423577893355" />
+      <inertia
+        ixx="0.000542006962748033"
+        ixy="-6.91243937089858E-15"
+        ixz="-3.59408880621022E-06"
+        iyy="0.000876413569064535"
+        iyz="-6.41210581809812E-13"
+        izz="0.000541562181671228" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_roll_rs04_actuator.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_roll_rs04_actuator.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_roll_rs04_actuator_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_roll_rs04_flange" />
+    <child
+      link="left_shoulder_roll_rs04_actuator" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.5"
+      upper="0.6"
+      effort="120"
+      velocity="3" />
+    <safety_controller
+      soft_upper_limit="3.14"
+      soft_lower_limit="-3.14"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="m4x25_left_shoulder_screws_roll">
+    <inertial>
+      <origin
+        xyz="5.45041063022556E-05 0.0496289837028945 5.4065350843624E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00451430348886328" />
+      <inertia
+        ixx="3.68173387240355E-07"
+        ixy="-6.77491029669699E-15"
+        ixz="6.50699246584675E-17"
+        iyy="1.54230097659284E-08"
+        iyz="1.8834147083779E-16"
+        izz="3.68173386339818E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x25_left_shoulder_screws_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x25_left_shoulder_screws_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m4x25_left_shoulder_screws_roll_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_roll_rs04_actuator" />
+    <child
+      link="m4x25_left_shoulder_screws_roll" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_roll">
+    <inertial>
+      <origin
+        xyz="-0.00752228697600921 0.0497547010298511 -0.0556811673680776"
+        rpy="0 0 0" />
+      <mass
+        value="0.997620677126329" />
+      <inertia
+        ixx="0.00534467261113571"
+        ixy="-8.46143420144779E-05"
+        ixz="-0.00043021047830454"
+        iyy="0.00591903779805697"
+        iyz="-0.000640722348575363"
+        izz="0.00178281858845296" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulde_roll_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m4x25_left_shoulder_screws_roll" />
+    <child
+      link="left_shoulder_roll" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="m4x16_left_shoulder_yaw_screws">
+    <inertial>
+      <origin
+        xyz="2.5579782736429E-10 5.54219781179199E-10 0.0451525729673443"
+        rpy="0 0 0" />
+      <mass
+        value="0.00270184474693418" />
+      <inertia
+        ixx="1.03557857485271E-07"
+        ixy="1.55850041576629E-16"
+        ixz="-1.90419676919472E-15"
+        iyy="1.0355785773746E-07"
+        iyz="-3.97957410574092E-15"
+        izz="1.05098007898705E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x16_left_shoulder_yaw_screws.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x16_left_shoulder_yaw_screws.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m4x16_left_shoulder_yaw_screws_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="-0.021972 0.0377 -0.17358"
+      rpy="0.057123 0.11257 0.47088" />
+    <parent
+      link="left_shoulder_roll" />
+    <child
+      link="m4x16_left_shoulder_yaw_screws" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_yaw_rs03_actuator">
+    <inertial>
+      <origin
+        xyz="-0.000137350542432579 -0.000269996878971224 0.0250841651661522"
+        rpy="0 0 0" />
+      <mass
+        value="0.356550969588104" />
+      <inertia
+        ixx="0.000274320425081221"
+        ixy="-2.07349930566519E-06"
+        ixz="-2.56253667482997E-07"
+        iyy="0.000271291938182423"
+        iyz="-5.1492479004519E-07"
+        izz="0.000381662133737228" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw_rs03_actuator.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw_rs03_actuator.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_yaw_rs03_actuator_fixture_link"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m4x16_left_shoulder_yaw_screws" />
+    <child
+      link="left_shoulder_yaw_rs03_actuator" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_yaw_rs03_flange">
+    <inertial>
+      <origin
+        xyz="-1.53386414680767E-10 -2.98890689975906E-10 -0.00125625967877485"
+        rpy="0 0 0" />
+      <mass
+        value="0.0040755509739889" />
+      <inertia
+        ixx="5.67676746163452E-07"
+        ixy="2.47327003153355E-21"
+        ixz="5.41456825042137E-16"
+        iyy="5.67676746163451E-07"
+        iyz="1.07103808934509E-15"
+        izz="1.13114082374848E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw_rs03_flange.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw_rs03_flange.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_yaw_rs03_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_yaw_rs03_actuator" />
+    <child
+      link="left_shoulder_yaw_rs03_flange" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="60"
+      velocity="1.6" />
+    <safety_controller
+      soft_upper_limit="3.14"
+      soft_lower_limit="-3.14"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="left_shoulder_yaw_shaft">
+    <inertial>
+      <origin
+        xyz="-1.67102665038499E-10 -3.20123483277257E-10 -0.0119851125606603"
+        rpy="0 0 0" />
+      <mass
+        value="0.000903649674373989" />
+      <inertia
+        ixx="4.41715688076232E-08"
+        ixy="-3.20532487364298E-24"
+        ixz="-4.07115851726496E-17"
+        iyy="4.41715688076231E-08"
+        iyz="-8.05300787860035E-17"
+        izz="1.80539813295948E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw_shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw_shaft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_yaw_shaft_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_yaw_rs03_flange" />
+    <child
+      link="left_shoulder_yaw_shaft" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_shoulder_yaw_flange">
+    <inertial>
+      <origin
+        xyz="-1.60467861221036E-10 -3.08570058393798E-10 -0.00898037826096698"
+        rpy="0 0 0" />
+      <mass
+        value="0.035353146109952" />
+      <inertia
+        ixx="9.85459914702348E-06"
+        ixy="-7.54070449635424E-08"
+        ixz="9.0137661709249E-15"
+        iyy="9.59337705821327E-06"
+        iyz="1.6920408928416E-14"
+        izz="1.87117812635894E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw_flange.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw_flange.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_yaw_flange_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_yaw_shaft" />
+    <child
+      link="left_shoulder_yaw_flange" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="1220_m4x16_left_shoulder_yaw_screws">
+    <inertial>
+      <origin
+        xyz="-2.46136444559397E-10 8.27351520626962E-11 -0.0114719356108075"
+        rpy="0 0 0" />
+      <mass
+        value="0.0014103641869818" />
+      <inertia
+        ixx="3.71610598568597E-08"
+        ixy="-3.45285867194948E-21"
+        ixz="-3.1304614416035E-17"
+        iyy="3.7161059856858E-08"
+        iyz="-6.1911171087287E-17"
+        izz="4.58636225470991E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/1220_m4x16_left_shoulder_yaw_screws.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/1220_m4x16_left_shoulder_yaw_screws.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1220_m4x16_left_shoulder_yaw_screws_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_yaw_flange" />
+    <child
+      link="1220_m4x16_left_shoulder_yaw_screws" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="m4x25_left_shoulder_yaw_screws">
+    <inertial>
+      <origin
+        xyz="-6.78105793738837E-10 -1.39607436722144E-09 -0.0144289836622529"
+        rpy="0 0 0" />
+      <mass
+        value="0.00270858202481973" />
+      <inertia
+        ixx="2.20903769276246E-07"
+        ixy="4.5276773617796E-13"
+        ixz="-1.98370339834682E-15"
+        iyy="2.20904293495991E-07"
+        iyz="-4.13368340010556E-15"
+        izz="9.2538047151024E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x25_left_shoulder_yaw_screws.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x25_left_shoulder_yaw_screws.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m4x25_left_shoulder_yaw_screws_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="1220_m4x16_left_shoulder_yaw_screws" />
+    <child
+      link="m4x25_left_shoulder_yaw_screws" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_shoulder_yaw">
+    <inertial>
+      <origin
+        xyz="-0.0276085511322613 1.01200275359759E-06 -0.0766319307470111"
+        rpy="0 0 0" />
+      <mass
+        value="0.488068654985126" />
+      <inertia
+        ixx="0.00146908224174374"
+        ixy="2.07765649369314E-07"
+        ixz="-0.000271215897480726"
+        iyy="0.00131630379047448"
+        iyz="6.91085961686537E-08"
+        izz="0.000811624953151409" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_shoulder_yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_yaw_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m4x25_left_shoulder_yaw_screws" />
+    <child
+      link="left_shoulder_yaw" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="m4x16_eft_elbow_screws">
+    <inertial>
+      <origin
+        xyz="0.0203953562271262 0.0412900580037792 8.9505136635637E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00270184358647757" />
+      <inertia
+        ixx="8.5307878105114E-08"
+        ixy="-3.69467570031513E-08"
+        ixz="-1.80311507673388E-15"
+        iyy="2.87597563316015E-08"
+        iyz="-3.57041578562358E-15"
+        izz="1.03557847634927E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x16_eft_elbow_screws.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x16_eft_elbow_screws.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m4x16_eft_elbow_screws_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.0987"
+      rpy="0 0 2.0296" />
+    <parent
+      link="left_shoulder_yaw" />
+    <child
+      link="m4x16_eft_elbow_screws" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_elbow_rs03_actuator">
+    <inertial>
+      <origin
+        xyz="0.0111097812731513 0.0224897321704036 -0.00030290848761072"
+        rpy="0 0 0" />
+      <mass
+        value="0.356550890896859" />
+      <inertia
+        ixx="0.000296217970946762"
+        ixy="4.22025243309491E-05"
+        ixz="-2.44834226083368E-07"
+        iyy="0.000360818228633436"
+        iyz="-5.20600183792302E-07"
+        izz="0.000270239476177235" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_elbow_rs03_actuator.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_elbow_rs03_actuator.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_elbow_rs03_actuator_ficture_link"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m4x16_eft_elbow_screws" />
+    <child
+      link="left_elbow_rs03_actuator" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_elbow_rs03_flange">
+    <inertial>
+      <origin
+        xyz="-0.000556362125168963 -0.00112634320717309 -1.71165526197115E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00407555097398898" />
+      <inertia
+        ixx="6.78191701523501E-07"
+        ixy="2.23735674453279E-07"
+        ixz="2.13638147030667E-16"
+        iyy="1.02062586838849E-06"
+        iyz="4.32507265141112E-16"
+        izz="5.6767674616347E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_elbow_rs03_flange.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_elbow_rs03_flange.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_elbow_rs03_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_elbow_rs03_actuator" />
+    <child
+      link="left_elbow_rs03_flange" />
+    <axis
+      xyz="0.44287 0.89659 0" />
+    <limit
+      lower="-1.3"
+      upper="1.9"
+      effort="60"
+      velocity="1.6" />
+    <safety_controller
+      soft_upper_limit="3.14"
+      soft_lower_limit="-3.14"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="left_elbow_shaft">
+    <inertial>
+      <origin
+        xyz="-0.514023072393507 0.0789116770807008 -0.294612659340846"
+        rpy="0 0 0" />
+      <mass
+        value="16.3859228521728" />
+      <inertia
+        ixx="4.16738711192707"
+        ixy="0.924028127098497"
+        ixz="-3.13052392625252"
+        iyy="7.10700847384237"
+        iyz="1.12422207884158"
+        izz="3.92149044711519" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_elbow_shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_elbow_shaft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_elbow_shaft_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_elbow_rs03_flange" />
+    <child
+      link="left_elbow_shaft" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="m4x25_left_elbow_screws">
+    <inertial>
+      <origin
+        xyz="-0.00623517627541537 -0.0126230082813592 -1.57688684332413E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00270858033444498" />
+      <inertia
+        ixx="1.79392020964126E-07"
+        ixy="-8.40403333063648E-08"
+        ixz="-2.2038575376356E-15"
+        iyy="5.07657695628291E-08"
+        iyz="-4.76822323956778E-15"
+        izz="2.2090401494749E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x25_left_elbow_screws.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x25_left_elbow_screws.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m4x25_left_elbow_screws_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_elbow_shaft" />
+    <child
+      link="m4x25_left_elbow_screws" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_elbow">
+    <inertial>
+      <origin
+        xyz="-0.00117660582092771 -0.022641696033932 -0.0323595608375808"
+        rpy="0 0 0" />
+      <mass
+        value="0.779765455775871" />
+      <inertia
+        ixx="0.00250248652168947"
+        ixy="0.000107026075524518"
+        ixz="0.0005731007053921"
+        iyy="0.00291648267618793"
+        iyz="0.000125954370046301"
+        izz="0.0009727842136137" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_elbow.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_elbow.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_elbow_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m4x25_left_elbow_screws" />
+    <child
+      link="left_elbow" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="m3x20_left_wrist_screws">
+    <inertial>
+      <origin
+        xyz="-0.00322617489995503 -0.037485447942657 0.00322630827041515"
+        rpy="0 0 0" />
+      <mass
+        value="0.00162137028637927" />
+      <inertia
+        ixx="8.36724015923321E-08"
+        ixy="7.03933741798225E-16"
+        ixz="-1.09755049470113E-14"
+        iyy="3.32920091133997E-09"
+        iyz="-9.7250106051877E-14"
+        izz="8.36724115121901E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m3x20_left_wrist_screws.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m3x20_left_wrist_screws.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m3x20_left_wrist_screws_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0.037069 -0.024445 -0.15849"
+      rpy="-1.2996 0 -2.0296" />
+    <parent
+      link="left_elbow" />
+    <child
+      link="m3x20_left_wrist_screws" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_wrist_actuator">
+    <inertial>
+      <origin
+        xyz="-3.38227224006005E-10 -0.0230138334252339 1.5071195758054E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.180583065420556" />
+      <inertia
+        ixx="8.80899821792287E-05"
+        ixy="-3.2000915970454E-14"
+        ixz="-1.10114283143059E-19"
+        iyy="0.000127000739066153"
+        iyz="4.70435805145308E-11"
+        izz="8.80899821792857E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_wrist_actuator.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_wrist_actuator.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_actuator_fixture_link"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m3x20_left_wrist_screws" />
+    <child
+      link="left_wrist_actuator" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_wrist_rs02_flange">
+    <inertial>
+      <origin
+        xyz="-4.04482225491165E-10 -0.00198993495050948 1.7656522466325E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00245793392108131" />
+      <inertia
+        ixx="1.34950766910329E-07"
+        ixy="-1.05559411859265E-16"
+        ixz="-2.75451143980158E-22"
+        iyy="2.63403217776685E-07"
+        iyz="1.55300624850455E-13"
+        izz="1.34950766910516E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_wrist_rs02_flange.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_wrist_rs02_flange.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_rs02_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_wrist_actuator" />
+    <child
+      link="left_wrist_rs02_flange" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="17"
+      velocity="0.8" />
+    <safety_controller
+      soft_upper_limit="3.14"
+      soft_lower_limit="-3.14"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="m4x20_left_wrist_screws">
+    <inertial>
+      <origin
+        xyz="3.32646576950424E-08 0.0084026650580129 2.10519430332567E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00232797016313302" />
+      <inertia
+        ixx="1.29587507987163E-07"
+        ixy="-3.32267475376017E-13"
+        ixz="3.13118176641034E-13"
+        iyy="8.48546817340278E-09"
+        iyz="-3.56341205573576E-13"
+        izz="1.2958722064008E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x20_left_wrist_screws.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m4x20_left_wrist_screws.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m4x20_left_wrist_screws_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_wrist_rs02_flange" />
+    <child
+      link="m4x20_left_wrist_screws" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_wrist_shaft">
+    <inertial>
+      <origin
+        xyz="-4.12632372714938E-10 0.00798511244069955 1.88625169705858E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.000903649674373966" />
+      <inertia
+        ixx="4.41715688076213E-08"
+        ixy="3.48151404884518E-17"
+        ixz="4.16692233573588E-23"
+        iyy="1.80539813302135E-09"
+        iyz="-5.12212323871548E-14"
+        izz="4.41715688075594E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_wrist_shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_wrist_shaft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_shaft_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m4x20_left_wrist_screws" />
+    <child
+      link="left_wrist_shaft" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_wrist">
+    <inertial>
+      <origin
+        xyz="-0.0126284319522777 0.0418086819204238 0.00594046727215813"
+        rpy="0 0 0" />
+      <mass
+        value="0.388950905166563" />
+      <inertia
+        ixx="0.000833659232932725"
+        ixy="0.000191177318242008"
+        ixz="2.04623744278247E-06"
+        iyy="0.000517833882964415"
+        iyz="-8.9557286905178E-05"
+        izz="0.000838969495047794" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_wrist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_wrist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_wrist_shaft" />
+    <child
+      link="left_wrist" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="m3x16_left_hand_screws">
+    <inertial>
+      <origin
+        xyz="-0.0363345583169044 0.00271816499833433 0.00366473339130802"
+        rpy="0 0 0" />
+      <mass
+        value="0.00139374174732649" />
+      <inertia
+        ixx="3.07153113593333E-09"
+        ixy="-2.72932818483645E-15"
+        ixz="-1.87300017933218E-14"
+        iyy="4.88927935104799E-08"
+        iyz="1.38709572835552E-16"
+        izz="4.88928835911797E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m3x16_left_hand_screws.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/m3x16_left_hand_screws.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m3x16_left_hand_screws_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0945 0"
+      rpy="0.64485 0.44406 0" />
+    <parent
+      link="left_wrist" />
+    <child
+      link="m3x16_left_hand_screws" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_hand_rs02">
+    <inertial>
+      <origin
+        xyz="-0.0230139545434718 1.43884311576414E-07 2.09463708378266E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.180583065420555" />
+      <inertia
+        ixx="0.000127000739066202"
+        ixy="1.45525618105826E-11"
+        ixz="-1.09526492523659E-11"
+        iyy="8.80899821792322E-05"
+        iyz="-3.92101631214872E-18"
+        izz="8.808998217923E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_hand_rs02.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_hand_rs02.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_rs02_fixture_link"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="m3x16_left_hand_screws" />
+    <child
+      link="left_hand_rs02" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_hand_rs02_flange">
+    <inertial>
+      <origin
+        xyz="-0.00201018644790724 1.51739685705365E-07 2.0355156260532E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00245793392108144" />
+      <inertia
+        ixx="2.63403217776863E-07"
+        ixy="4.80410901722501E-14"
+        ixz="-3.61570083447584E-14"
+        iyy="1.34950766910356E-07"
+        iyz="-1.33842690619523E-20"
+        izz="1.34950766910349E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_hand_rs02_flange.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_hand_rs02_flange.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_rs02_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_hand_rs02" />
+    <child
+      link="left_hand_rs02_flange" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.5"
+      upper="1.7"
+      effort="17"
+      velocity="0.8" />
+    <safety_controller
+      soft_upper_limit="1.7"
+      soft_lower_limit="-1.5"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="left_hand">
+    <inertial>
+      <origin
+        xyz="0.0119773774839164 0.0114766683647565 -0.0111415398773689"
+        rpy="0 0 0" />
+      <mass
+        value="0.285530357010459" />
+      <inertia
+        ixx="0.000354627596033385"
+        ixy="1.61688557058995E-05"
+        ixz="-1.60212159121833E-05"
+        iyy="0.0002475134332717"
+        iyz="3.07039763416872E-05"
+        izz="0.000247329279761545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanoid_arm_5dof_1.1/meshes/left_hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_fixture_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_hand_rs02_flange" />
+    <child
+      link="left_hand" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
