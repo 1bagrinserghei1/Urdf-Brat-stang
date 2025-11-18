@@ -48,14 +48,14 @@
     name="left_shoulder_pitch_rs04_actuator">
     <inertial>
       <origin
-        xyz="-0.024532 6.1284E-13 3.0664E-13"
+        xyz="-0.024532 6.124E-13 3.0664E-13"
         rpy="0 0 0" />
       <mass
         value="1.345" />
       <inertia
         ixx="0.00087641"
-        ixy="-1.2177E-17"
-        ixz="-1.4781E-16"
+        ixy="-1.214E-17"
+        ixz="-1.4778E-16"
         iyy="0.0005424"
         iyz="-3.5471E-06"
         izz="0.00054116" />
@@ -107,8 +107,8 @@
         value="0.0075" />
       <inertia
         ixx="2.3623E-06"
-        ixy="6.4388E-21"
-        ixz="-7.1204E-21"
+        ixy="6.5844E-21"
+        ixz="-6.9483E-21"
         iyy="1.1941E-06"
         iyz="3.6528E-21"
         izz="1.1941E-06" />
@@ -138,7 +138,7 @@
     </collision>
   </link>
   <joint
-    name="left_shoulder_pitch_rs04"
+    name="left_shoulder_pitch_rs04_flange"
     type="revolute">
     <origin
       xyz="0 0 0"
@@ -166,7 +166,7 @@
         xyz="0.068247 0.039551 -5.234E-06"
         rpy="0 0 0" />
       <mass
-        value="0.29944" />
+        value="0.298" />
       <inertia
         ixx="0.0043457"
         ixy="-0.0020544"
@@ -216,14 +216,14 @@
     name="left_shoulder_roll_rs04_flange">
     <inertial>
       <origin
-        xyz="-5.7019E-12 -0.0021106 2.1706E-10"
+        xyz="-5.7014E-12 -0.0021106 2.1706E-10"
         rpy="0 0 0" />
       <mass
         value="0.0075" />
       <inertia
         ixx="1.1941E-06"
-        ixy="3.5072E-22"
-        ixz="1.0191E-21"
+        ixy="4.0366E-22"
+        ixz="7.4115E-22"
         iyy="2.3623E-06"
         iyz="-4.903E-15"
         izz="1.1941E-06" />
@@ -256,8 +256,8 @@
     name="left_shoulder_roll_rs04_flange"
     type="fixed">
     <origin
-      xyz="0.11678 0.0487 -2.7056E-05"
-      rpy="0 0 3.1416" />
+      xyz="0.116775431275821 0.0487000000004332 -2.70558071411298E-05"
+      rpy="0 0 3.14159265358979" />
     <parent
       link="left_shoulder_pitch" />
     <child
@@ -306,7 +306,7 @@
     </collision>
   </link>
   <joint
-    name="left_shoulder_roll_rs04"
+    name="left_shoulder_roll_rs04_actuator_fixture_link"
     type="revolute">
     <origin
       xyz="0 0 0"
@@ -387,7 +387,7 @@
         xyz="-0.00013735 -0.00027 0.025084"
         rpy="0 0 0" />
       <mass
-        value="0.83" />
+        value="830" />
       <inertia
         ixx="0.00027432"
         ixy="-2.0735E-06"
@@ -424,8 +424,8 @@
     name="left_shoulder_yaw_rs03_actuator_fixture_link"
     type="fixed">
     <origin
-      xyz="-0.021972 0.0377 -0.17358"
-      rpy="0.057123 0.11257 0.47088" />
+      xyz="-0.0219716026665047 0.037700000000231 -0.173578614834026"
+      rpy="0.0571232415871479 0.112571267005327 0.470875575147914" />
     <parent
       link="left_shoulder_roll" />
     <child
@@ -443,8 +443,8 @@
         value="0.005" />
       <inertia
         ixx="5.6768E-07"
-        ixy="8.5365E-22"
-        ixz="8.5365E-22"
+        ixy="8.0071E-22"
+        ixz="8.2222E-22"
         iyy="5.6768E-07"
         iyz="2.647E-23"
         izz="1.1311E-06" />
@@ -474,7 +474,7 @@
     </collision>
   </link>
   <joint
-    name="left_shoulder_yaw_rs03"
+    name="left_shoulder_yaw_rs03_flange"
     type="revolute">
     <origin
       xyz="0 0 0"
@@ -506,9 +506,9 @@
       <inertia
         ixx="1.2318E-05"
         ixy="-9.4259E-08"
-        ixz="4.4901E-16"
+        ixz="4.49E-16"
         iyy="1.1992E-05"
-        iyz="-6.0556E-16"
+        iyz="-6.0555E-16"
         izz="2.339E-05" />
     </inertial>
     <visual>
@@ -555,7 +555,7 @@
         xyz="-0.027609 1.0122E-06 -0.076632"
         rpy="0 0 0" />
       <mass
-        value="0.122018" />
+        value="0.12218" />
       <inertia
         ixx="0.0018364"
         ixy="2.5971E-07"
@@ -642,10 +642,10 @@
     </collision>
   </link>
   <joint
-    name="left_elbow_rs03_actuator_ficture_link"
+    name="left_elbow_rs03_actuator_fixture_link"
     type="fixed">
     <origin
-      xyz="0 0 -0.0987"
+      xyz="0 0 -0.0987000004167597"
       rpy="0 0 0" />
     <parent
       link="left_shoulder_yaw" />
@@ -664,10 +664,10 @@
         value="0.005" />
       <inertia
         ixx="1.1311E-06"
-        ixy="1.3467E-21"
-        ixz="4.7778E-21"
+        ixy="1.3632E-21"
+        ixz="4.8473E-21"
         iyy="5.6768E-07"
-        iyz="-4.4999E-22"
+        iyz="-4.7646E-22"
         izz="5.6768E-07" />
     </inertial>
     <visual>
@@ -695,7 +695,7 @@
     </collision>
   </link>
   <joint
-    name="left_elbow_rs03"
+    name="left_elbow_rs03_flange"
     type="revolute">
     <origin
       xyz="0 0 0"
@@ -723,7 +723,7 @@
         xyz="0.020821 0.0089724 -0.03236"
         rpy="0 0 0" />
       <mass
-        value="0.1949" />
+        value="0.194942" />
       <inertia
         ixx="0.0036503"
         ixy="0.00012418"
@@ -770,19 +770,19 @@
       xyz="0 0 0" />
   </joint>
   <link
-    name="left_wrist_actuator">
+    name="left_wrist_rs02_actuator">
     <inertial>
       <origin
-        xyz="-6.2313E-10 -0.023014 2.7886E-07"
+        xyz="-6.2275E-10 -0.023014 2.7886E-07"
         rpy="0 0 0" />
       <mass
         value="0.38" />
       <inertia
         ixx="8.809E-05"
-        ixy="-1.0059E-17"
-        ixz="-7.708E-20"
+        ixy="-1.0045E-17"
+        ixz="-7.6445E-20"
         iyy="0.000127"
-        iyz="3.6839E-17"
+        iyz="3.6853E-17"
         izz="8.809E-05" />
     </inertial>
     <visual>
@@ -791,7 +791,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://humanoid_arm_5dof/meshes/left_wrist_actuator.STL" />
+          filename="package://humanoid_arm_5dof/meshes/left_wrist_rs02_actuator.STL" />
       </geometry>
       <material
         name="">
@@ -805,7 +805,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://humanoid_arm_5dof/meshes/left_wrist_actuator.STL" />
+          filename="package://humanoid_arm_5dof/meshes/left_wrist_rs02_actuator.STL" />
       </geometry>
     </collision>
   </link>
@@ -818,7 +818,7 @@
     <parent
       link="left_elbow" />
     <child
-      link="left_wrist_actuator" />
+      link="left_wrist_rs02_actuator" />
     <axis
       xyz="0 0 0" />
   </joint>
@@ -826,14 +826,14 @@
     name="left_wrist_rs02_flange">
     <inertial>
       <origin
-        xyz="-3.2202E-10 -0.0019899 2.7874E-07"
+        xyz="-3.1461E-10 -0.0019899 2.7875E-07"
         rpy="0 0 0" />
       <mass
         value="0.0025" />
       <inertia
         ixx="1.3495E-07"
-        ixy="8.3809E-20"
-        ixz="-2.7711E-22"
+        ixy="8.3825E-20"
+        ixz="-2.7173E-22"
         iyy="2.634E-07"
         iyz="1.0102E-19"
         izz="1.3495E-07" />
@@ -863,13 +863,13 @@
     </collision>
   </link>
   <joint
-    name="left_wrist_rs02"
+    name="left_wrist_rs02_flange"
     type="revolute">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="left_wrist_actuator" />
+      link="left_wrist_rs02_actuator" />
     <child
       link="left_wrist_rs02_flange" />
     <axis
@@ -891,7 +891,7 @@
         xyz="-0.012628 0.041809 0.0059405"
         rpy="0 0 0" />
       <mass
-        value="0.09723" />
+        value="0.097238" />
       <inertia
         ixx="0.0010421"
         ixy="0.00023897"
@@ -938,7 +938,7 @@
       xyz="0 0 0" />
   </joint>
   <link
-    name="left_hand_rs02">
+    name="left_hand_rs02_actuator">
     <inertial>
       <origin
         xyz="-0.023014 2.2389E-07 3.2595E-07"
@@ -950,7 +950,7 @@
         ixy="2.2647E-11"
         ixz="-1.704E-11"
         iyy="8.809E-05"
-        iyz="-9.7485E-18"
+        iyz="-9.7529E-18"
         izz="8.809E-05" />
     </inertial>
     <visual>
@@ -959,7 +959,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://humanoid_arm_5dof/meshes/left_hand_rs02.STL" />
+          filename="package://humanoid_arm_5dof/meshes/left_hand_rs02_actuator.STL" />
       </geometry>
       <material
         name="">
@@ -973,12 +973,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://humanoid_arm_5dof/meshes/left_hand_rs02.STL" />
+          filename="package://humanoid_arm_5dof/meshes/left_hand_rs02_actuator.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="left_hand_rs02_fixture_link"
+    name="left_hand_rs02_actuator_fixture_link"
     type="fixed">
     <origin
       xyz="0 0.0945 0"
@@ -986,7 +986,7 @@
     <parent
       link="left_wrist" />
     <child
-      link="left_hand_rs02" />
+      link="left_hand_rs02_actuator" />
     <axis
       xyz="0 0 0" />
   </joint>
@@ -1003,7 +1003,7 @@
         ixy="7.4761E-14"
         ixz="-5.6253E-14"
         iyy="1.3495E-07"
-        iyz="-3.2502E-20"
+        iyz="-3.2497E-20"
         izz="1.3495E-07" />
     </inertial>
     <visual>
@@ -1031,17 +1031,17 @@
     </collision>
   </link>
   <joint
-    name="left_hand_rs02"
+    name="left_hand_rs02_flange"
     type="revolute">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="left_hand_rs02" />
+      link="left_hand_rs02_actuator" />
     <child
       link="left_hand_rs02_flange" />
     <axis
-      xyz="1 0 0" />
+      xyz="0.999999999999735 0 0" />
     <limit
       lower="-1.5"
       upper="1.7"
@@ -1109,7 +1109,7 @@
     name="left_palm">
     <inertial>
       <origin
-        xyz="-8.9735E-10 0.0065439 -1.9599E-09"
+        xyz="-8.9686E-10 0.0065439 -1.9601E-09"
         rpy="0 0 0" />
       <mass
         value="0.047634" />
@@ -1149,8 +1149,8 @@
     name="left_palm_fixture"
     type="fixed">
     <origin
-      xyz="0 0.046829 -0.045845"
-      rpy="-0.77494 -0.017568 0.017203" />
+      xyz="0 0.0468292785877469 -0.0458451123506719"
+      rpy="-0.774935929627841 -0.017568105500413 0.017202724160053" />
     <parent
       link="left_hand" />
     <child
@@ -1162,16 +1162,16 @@
     name="left_palm_right_finger">
     <inertial>
       <origin
-        xyz="0.021797 0.050369 1.1072E-11"
+        xyz="0.021797 0.050369 1.0902E-11"
         rpy="0 0 0" />
       <mass
-        value="0.02913" />
+        value="0.029134" />
       <inertia
         ixx="0.00010609"
         ixy="1.2822E-05"
-        ixz="2.1515E-19"
+        ixz="1.2875E-19"
         iyy="4.9057E-05"
-        iyz="2.3548E-19"
+        iyz="-2.0159E-19"
         izz="8.8986E-05" />
     </inertial>
     <visual>
@@ -1224,16 +1224,16 @@
     name="left_palm_left_finger">
     <inertial>
       <origin
-        xyz="-0.017013 0.050369 1.1072E-11"
+        xyz="-0.017013 0.050369 1.0903E-11"
         rpy="0 0 0" />
       <mass
-        value="0.02913" />
+        value="0.029134" />
       <inertia
         ixx="0.00010609"
         ixy="-1.2822E-05"
-        ixz="-2.6936E-19"
+        ixz="-3.3881E-20"
         iyy="4.9057E-05"
-        iyz="1.44E-19"
+        iyz="-1.5247E-19"
         izz="8.8986E-05" />
     </inertial>
     <visual>
